@@ -40,3 +40,35 @@ Meskipun mudah dikonfigurasi untuk penggunaan dasar, konfigurasi Apache untuk ke
 
 # e. Beberapa Modul Sudah Tidak Dikembangkan Secara Aktif
 Karena Apache merupakan proyek lama, tidak semua modul mendapatkan pembaruan rutin sesuai perkembangan teknologi web modern.
+
+# Kendala Yang Dialami Beserta Solusinya.
+
+## 1. Tidak Dapat Melakukan Login ke WinSCP dan SSH Root
+• Kendala:
+Pengguna tidak dapat melakukan login ke WinSCP dan SSH root karena akses ke server dibatasi oleh jaringan internal. Hal ini membuat proses autentikasi gagal ketika mencoba masuk dari jaringan luar.
+• Solusi:
+Menggunakan VPN untuk terhubung ke jaringan internal terlebih dahulu sehingga akses login ke WinSCP dan SSH root dapat berjalan dengan normal.
+
+## 2. Ketidakstabilan Akses Jaringan
+• Kendala:
+Koneksi jaringan yang tidak konsisten menghambat proses pemindahan data dan aktivitas administrasi server.
+• Solusi:
+Menggunakan jaringan yang lebih stabil (misalnya koneksi LAN) serta melakukan pengecekan perangkat jaringan seperti router atau access point untuk mengurangi gangguan.
+
+## 3. Server Belum Diaktifkan
+• Kendala:
+Server milik guru belum diaktifkan pada saat proses pengerjaan, sehingga seluruh aktivitas terkait akses server tidak dapat dilakukan.
+• Solusi:
+Melakukan konfirmasi terlebih dahulu kepada guru atau penanggung jawab server mengenai jadwal penyalaan server sebelum memulai pekerjaan.
+
+## 4. Kesulitan Awal dalam Menambahkan Gambar pada Website
+▪︎ Kendala:
+Pada tahap awal, menambahkan gambar ke dalam website terasa sulit karena belum memahami struktur direktori dan path file.
+• Solusi:
+Mempelajari struktur folder proyek serta cara penempatan file gambar. Setelah memahami alurnya, proses penambahan gambar menjadi lebih mudah.
+
+## 5. Emoji Tidak Tampil dengan Benar
+• Kendala:
+Emoji tidak muncul sebagaimana mestinya dan berubah menjadi tanda tanya (“?”) saat program dijalankan. Hal ini diduga terkait pengaturan encoding atau font yang tidak mendukung.
+• Solusi:
+Mengubah encoding file maupun server menjadi UTF-8 serta menggunakan font yang mendukung karakter emoji. Jika perlu, emoji dapat diganti dengan icon berbasis gambar atau SVG.
