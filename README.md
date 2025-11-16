@@ -40,3 +40,5 @@ Meskipun mudah dikonfigurasi untuk penggunaan dasar, konfigurasi Apache untuk ke
 
 # e. Beberapa Modul Sudah Tidak Dikembangkan Secara Aktif
 Karena Apache merupakan proyek lama, tidak semua modul mendapatkan pembaruan rutin sesuai perkembangan teknologi web modern.
+
+# Kendala dan Solusi
