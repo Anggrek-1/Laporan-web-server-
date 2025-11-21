@@ -1,4 +1,14 @@
 # 📄 LAPORAN WEB SERVER APACHE
+### 👥 Informasi Kelompok dan Spesifikasi Lingkungan Praktik
+| Peran | Nama Lengkap | Kelas |
+| :--- | :--- | :--- |
+| **Ketua Kelompok** | [Soraya Oktaviani Sopian] | [XI TJKT 1] |
+| Anggota 1 | [Andrea Fredericka G.S] | [XI TJKT 1] |
+| Anggota 2 | [Elis Lisnawati] | [XI TJKT 1] |
+| Anggota 3 | [Risa Solaiha M] | [XI TJKT 1] |
+| Anggota 4 | [Sri Ayu A] | [XI TJKT 1] |
+| **Nama Sekolah/Institusi** | [SMK NEGERI 1 SOREANG] | |
+
 # 🛠️ 1. TAHAPAN-TAHAPAN MENGINSTAL WEB SERVER APACHE
 # Menyiapkan Debian Server 🐧
 Siapkan server Debian yang sudah punya IP Address dan bisa diakses dari jaringan LAN.
