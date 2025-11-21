@@ -2,12 +2,12 @@
 ### 👥 Informasi Kelompok dan Spesifikasi Lingkungan Praktik
 | Peran | Nama Lengkap | Kelas |
 | :--- | :--- | :--- |
-| **Ketua Kelompok** | [Soraya Oktaviani Sopian] | [XI TJKT 1] |
-| Anggota 1 | [Andrea Fredericka G.S] | [XI TJKT 1] |
-| Anggota 2 | [Elis Lisnawati] | [XI TJKT 1] |
-| Anggota 3 | [Risa Solaiha M] | [XI TJKT 1] |
-| Anggota 4 | [Sri Ayu A] | [XI TJKT 1] |
-| **Nama Sekolah/Institusi** | [SMK NEGERI 1 SOREANG] | |
+| **Ketua Kelompok** | Soraya Oktaviani Sopian | XI TJKT  |
+| Anggota 1 | Andrea Fredericka G.S | XI TJKT 1 |
+| Anggota 2 | Elis Lisnawati | XI TJKT 1 |
+| Anggota 3 | Risa Solaiha M | XI TJKT 1 |
+| Anggota 4 | Sri Ayu A | XI TJKT 1 |
+| **Nama Sekolah/Institusi** | SMK NEGERI 1 SOREANG | |
 
 # 🛠️ 1. TAHAPAN-TAHAPAN MENGINSTAL WEB SERVER APACHE
 # Menyiapkan Debian Server 🐧
@@ -15,7 +15,7 @@ Siapkan server Debian yang sudah punya IP Address dan bisa diakses dari jaringan
 Atur Repository agar bisa digunakan untuk instalasi software.
 Coba akses server lewat SSH pakai CMD dan WinSCP untuk memastikan koneksinya sudah berfungsi.
 
-# Instalasi Apache Web Server 🌐
+# ▪️ Instalasi Apache Web Server 🌐
 1.Login dan Update Paket
 apt update && apt upgrade
 2.Instal Apache
@@ -26,20 +26,20 @@ systemctl start apache2
 systemctl status apache2
 4.Uji dari browser: http://ip-server
 
-# Instalasi PHP 🐘
+# ▪️ Instalasi PHP 🐘
 1.Instal PHP Dasar
 apt install php
 3.Instalasi Extension PHP Tambahan:
 apt install php-common php-xml php-curl php-zip php-gd php-mbstring php-intl php-json php-soap php-mysql
 
-# Pastikan PHP Sudah Berjalan 🚀
+# ▪️ Pastikan PHP Sudah Berjalan 🚀
 1.Buat file uji:
 nano /var/www/html/info.php
 2.tambahkan script berikut:
 <?php phpinfo(); ?>
 3.Akses dari browser: http://ip-server/info.php
 
-# Menambahkan SSL Self-Signed Certificate 🔐
+# ▪️ Menambahkan SSL Self-Signed Certificate 🔐
 1.Instal OpenSSL dan aktifkan modul SSL
 apt install openssl
 a2enmod ssl
@@ -53,7 +53,7 @@ openssl req -x509 -nodes -days 365 -newkey
 • Organization Name (eg, company) [Internet   Widgits Pty Ltd]: SMKN 1 Soreang
 • Common Name (e.g. server FQDN or YOUR       name) []: server.local
 
-# Konfigurasi Virtual Host HTTPS ⚙️📄
+# ▪️ Konfigurasi Virtual Host HTTPS ⚙️📄
 1.Salin file konfigurasi default
 cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default-ssl.conf
 2.Edit supaya bisa memasukan konfigurasi file SSL
@@ -80,14 +80,14 @@ VirtualHost *:443>
    </VirtualHost>
    Simpan (Ctrl + O, Enter), lalu keluar       (Ctrl + X).
 
-# Aktifkan HTTPS dan Modul Rewrite ⚙️
+# ▪️ Aktifkan HTTPS dan Modul Rewrite ⚙️
 1.Aktifkan situs SSL dan modul rewrite
 a2ensite 000-default-ssl.conf
 a2enmod rewrite
 systemctl reload apache2
 2.Uji dari browser: https://ip-server
 
-# Redirect HTTP ke HTTPS (Opsional) 🔗
+# ▪️ Redirect HTTP ke HTTPS (Opsional) 🔗
 1.Untuk melakukan redirect (mengalihkan), baiknya server harus menggunakan IP statis, dan DNS server bekerja dengan baik, jika tidak sebaiknya skip dulu tahapan di bawah!
 2.Edit file konfigurasi HTTP:
 nano /etc/apache2/sites-available/000-default.conf
@@ -97,7 +97,7 @@ nano /etc/apache2/sites-available/000-default.conf
   ServerName server.local
   DocumentRoot /var/www/html
 
-  # Redirect semua akses HTTP ke HTTPS
+  # ▪️ Redirect semua akses HTTP ke HTTPS
   Redirect "/" "https://server.local/"
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
@@ -107,7 +107,7 @@ nano /etc/apache2/sites-available/000-default.conf
 5.Reload Apache:
 systemctl reload apache2
 
-# Uji Coba Web Apache
+# ▪️ Uji Coba Web Apache
 1.Pastikan Apache Berjalan
 Sebelum uji coba:
 systemctl status apache2
@@ -146,19 +146,19 @@ Jika terbuka → konfigurasi Apache dan folder web tidak ada masalah.
 # ⭐ 2. KELEBIHAN DAN KEKURANGAN WEB SERVER APACHE
 Web Server Apache memiliki beberapa keunggulan yang membuatnya banyak digunakan oleh pengelola website, baik skala kecil maupun besar.
 # Kelebihan Web Server Apache
-## a. Bersifat Open Source dan Gratis
+## ▪️ Bersifat Open Source dan Gratis
 Apache dapat digunakan tanpa biaya lisensi. Pengguna juga memiliki kebebasan untuk memodifikasi kode sumber sesuai kebutuhan. Hal ini membuat Apache menjadi salah satu web server paling populer di dunia.
 
-## b. Mudah Dikonfigurasi
+## ▪️ Mudah Dikonfigurasi
 Apache memiliki struktur konfigurasi yang sederhana dan mudah dipahami. File konfigurasi seperti httpd.conf memungkinkan administrator melakukan pengaturan dengan fleksibel.
 
-## c. Mendukung Berbagai Sistem Operasi
+## ▪️ Mendukung Berbagai Sistem Operasi
 Apache dapat dijalankan pada banyak platform, seperti Linux, Windows, macOS, dan berbagai varian Unix. Hal ini meningkatkan kompatibilitas dan kemudahan implementasi.
 
-## d. Memiliki Dokumentasi Lengkap dan Komunitas Besar
+## ▪️ Memiliki Dokumentasi Lengkap dan Komunitas Besar
 Dokumentasi resmi Apache sangat lengkap. Selain itu, komunitas yang besar membuat pengguna mudah menemukan solusi saat terjadi masalah.
 
-## e. Mendukung Banyak Modul Tambahan
+## ▪️ Mendukung Banyak Modul Tambahan
 Apache menyediakan berbagai modul seperti:
 - mod_ssl (untuk HTTPS),
 - mod_rewrite (untuk rewriting URL),
@@ -166,24 +166,24 @@ Apache menyediakan berbagai modul seperti:
 - dan modul lain yang dapat diaktifkan sesuai kebutuhan.
 Modul-modul ini membuat Apache sangat fleksibel.
 
-## f. Stabil dan Telah Teruji
+## ▪️ Stabil dan Telah Teruji
 Apache sudah digunakan selama bertahun-tahun di berbagai lingkungan produksi, sehingga stabilitasnya tidak diragukan lagi.
 
 # Kekurangan Web Server Apache
 Di balik kelebihannya, Apache juga memiliki beberapa kelemahan yang perlu diperhatikan.
-## a. Kurang Efisien untuk Koneksi dalam Jumlah Besar
+## ▪️ Kurang Efisien untuk Koneksi dalam Jumlah Besar
 Arsitektur Apache yang berbasis proses atau thread membuat penggunaan resource meningkat saat menangani ribuan koneksi bersamaan. Web server modern seperti Nginx lebih efisien untuk trafik besar.
 
-## b. Konsumsi Resource Lebih Tinggi
+## ▪️ Konsumsi Resource Lebih Tinggi
 Apache cenderung memakan RAM dan CPU lebih banyak, terutama jika banyak modul aktif. Hal ini dapat menjadi masalah pada server dengan spesifikasi rendah.
 
-## c. Performa Default Tidak Secepat Web Server Modern
+## ▪️ Performa Default Tidak Secepat Web Server Modern
 Dalam menyajikan static content seperti gambar, CSS, atau JavaScript, Apache umumnya lebih lambat dibandingkan web server lain seperti Nginx atau LiteSpeed.
 
-## d. Pengaturan Lebih Kompleks untuk Performa Tinggi
+## ▪️ Pengaturan Lebih Kompleks untuk Performa Tinggi
 Meskipun mudah dikonfigurasi untuk penggunaan dasar, konfigurasi Apache untuk kebutuhan high performance membutuhkan keahlian teknis yang lebih tinggi.
 
-## e. Beberapa Modul Sudah Tidak Dikembangkan Secara Aktif
+## ▪️ Beberapa Modul Sudah Tidak Dikembangkan Secara Aktif
 Karena Apache merupakan proyek lama, tidak semua modul mendapatkan pembaruan rutin sesuai perkembangan teknologi web modern.
 
 # 📂 3. Struktur Penggunaan Kode HTML Website
@@ -208,7 +208,7 @@ Dengan cara ini, seluruh komponen website dapat berjalan dan ditampilkan dengan 
 # 🧩 4. Kendala dan Solusi
 Kendala Yang Dialami Beserta Solusinya.
 
-## 1. Tidak Dapat Melakukan Login ke WinSCP dan SSH Root
+## ▪️ Tidak Dapat Melakukan Login ke WinSCP dan SSH Root
 
 Kendala:
 Pengguna tidak dapat melakukan login ke WinSCP dan SSH root karena akses ke server dibatasi oleh jaringan internal. Hal ini membuat proses autentikasi gagal ketika mencoba masuk dari jaringan luar.
@@ -216,7 +216,7 @@ Pengguna tidak dapat melakukan login ke WinSCP dan SSH root karena akses ke serv
 Solusi:
 Menggunakan VPN untuk terhubung ke jaringan internal terlebih dahulu sehingga akses login ke WinSCP dan SSH root dapat berjalan dengan normal.
 
-## 2. Ketidakstabilan Akses Jaringan
+## ▪️ Ketidakstabilan Akses Jaringan
 
 Kendala:
 Koneksi jaringan yang tidak konsisten menghambat proses pemindahan data dan aktivitas administrasi server.
@@ -224,7 +224,7 @@ Koneksi jaringan yang tidak konsisten menghambat proses pemindahan data dan akti
 Solusi:
 Menggunakan jaringan yang lebih stabil (misalnya koneksi LAN) serta melakukan pengecekan perangkat jaringan seperti router atau access point untuk mengurangi gangguan.
 
-## 3. Server Belum Diaktifkan
+## ▪️ Server Belum Diaktifkan
 
 Kendala:
 Server milik guru belum diaktifkan pada saat proses pengerjaan, sehingga seluruh aktivitas terkait akses server tidak dapat dilakukan.
@@ -232,7 +232,7 @@ Server milik guru belum diaktifkan pada saat proses pengerjaan, sehingga seluruh
 Solusi:
 Melakukan konfirmasi terlebih dahulu kepada guru atau penanggung jawab server mengenai jadwal penyalaan server sebelum memulai pekerjaan.
 
-## 4. Kesulitan Awal dalam Menambahkan Gambar pada Website
+## ▪️ Kesulitan Awal dalam Menambahkan Gambar pada Website
 
 Kendala:
 Pada tahap awal, menambahkan gambar ke dalam website terasa sulit karena belum memahami struktur direktori dan path file.
@@ -240,10 +240,17 @@ Pada tahap awal, menambahkan gambar ke dalam website terasa sulit karena belum m
 Solusi:
 Mempelajari struktur folder proyek serta cara penempatan file gambar. Setelah memahami alurnya, proses penambahan gambar menjadi lebih mudah.
 
-## 5. Emoji Tidak Tampil dengan Benar
+## ▪️ Emoji Tidak Tampil dengan Benar
 
 Kendala:
 Emoji tidak muncul sebagaimana mestinya dan berubah menjadi tanda tanya (“?”) saat program dijalankan. Hal ini diduga terkait pengaturan encoding atau font yang tidak mendukung.
 
 Solusi:
 Mengubah encoding file maupun server menjadi UTF-8 serta menggunakan font yang mendukung karakter emoji. Jika perlu, emoji dapat diganti dengan icon berbasis gambar atau SVG.
+
+# ▪️ Dokumentasi Video Pengerjaan
+Seluruh proses pengerjaan telah direkam dan diunggah ke YouTube.
+
+**Link Video YouTube:**
+
+[![Thumbnail Video Pengerjaan](https://img.youtube.com/vi/1-qlNtQS1OA/0.jpg)](https://www.youtube.com/watch?v=1-qlNtQS1OA)
