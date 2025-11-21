@@ -25,7 +25,7 @@ Modul-modul ini membuat Apache sangat fleksibel.
 ## f. Stabil dan Telah Teruji
 Apache sudah digunakan selama bertahun-tahun di berbagai lingkungan produksi, sehingga stabilitasnya tidak diragukan lagi.
 
-## Kekurangan Web Server Apache
+# Kekurangan Web Server Apache
 Di balik kelebihannya, Apache juga memiliki beberapa kelemahan yang perlu diperhatikan.
 ## a. Kurang Efisien untuk Koneksi dalam Jumlah Besar
 Arsitektur Apache yang berbasis proses atau thread membuat penggunaan resource meningkat saat menangani ribuan koneksi bersamaan. Web server modern seperti Nginx lebih efisien untuk trafik besar.
