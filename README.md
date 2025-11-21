@@ -1,5 +1,6 @@
-# Laporan-web-server-
+# LAPORAN WEB SERVER APACHE
 # 2. Kelebihan dan Kekurangan Apache
+Web Server Apache memiliki beberapa keunggulan yang membuatnya banyak digunakan oleh pengelola website, baik skala kecil maupun besar.
 # Kelebihan Web Server Apache
 Web Server Apache memiliki beberapa keunggulan yang membuatnya banyak digunakan oleh pengelola website, baik skala kecil maupun besar.
 ## a. Bersifat Open Source dan Gratis
