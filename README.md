@@ -2,8 +2,8 @@
 ### 👥 Informasi Kelompok dan Spesifikasi Lingkungan Praktik
 | Peran | Nama Lengkap | Kelas |
 | :--- | :--- | :--- |
-| **Ketua Kelompok** | Soraya Oktaviani Sopian | XI TJKT  |
-| Anggota 1 | Andrea Fredericka G.S | XI TJKT 1 |
+| **Ketua Kelompok** | Andrea Fredericka G.S | XI TJKT  |
+| Anggota 1 | Soraya Oktaviani Sopian | XI TJKT 1 |
 | Anggota 2 | Elis Lisnawati | XI TJKT 1 |
 | Anggota 3 | Risa Solaiha M | XI TJKT 1 |
 | Anggota 4 | Sri Ayu A | XI TJKT 1 |
