@@ -2,12 +2,15 @@
 ### 👥 Informasi Kelompok dan Spesifikasi Lingkungan Praktik
 | Peran | Nama Lengkap | Kelas |
 | :--- | :--- | :--- |
-| **Ketua Kelompok** | Soraya Oktaviani Sopian | XI TJKT  |
-| Anggota 1 | Andrea Fredericka G.S | XI TJKT 1 |
+| **Ketua Kelompok** | Andrea Fredericka G.S | XI TJKT |
+| Anggota 1 | Soraya Oktaviani Sopian | XI TJKT 1 |
 | Anggota 2 | Elis Lisnawati | XI TJKT 1 |
 | Anggota 3 | Risa Solaiha M | XI TJKT 1 |
 | Anggota 4 | Sri Ayu A | XI TJKT 1 |
 | **Nama Sekolah/Institusi** | SMK NEGERI 1 SOREANG | |
+
+# 🔥 Pengertian Apache
+Apache adalah web server open-source yang digunakan untuk menerima permintaan dari browser dan menampilkan halaman web ke pengguna. Apache populer karena stabil, aman, fleksibel, serta mendukung banyak modul dan berbagai sistem operasi.
 
 # 🛠️ 1. TAHAPAN-TAHAPAN MENGINSTAL WEB SERVER APACHE
 # Menyiapkan Debian Server 🐧
@@ -249,8 +252,7 @@ Solusi:
 Mengubah encoding file maupun server menjadi UTF-8 serta menggunakan font yang mendukung karakter emoji. Jika perlu, emoji dapat diganti dengan icon berbasis gambar atau SVG.
 
 # ▪️ Dokumentasi Video Pengerjaan
-Seluruh proses pengerjaan telah direkam dan diunggah ke YouTube.
+Seluruh proses pengerjaan dan penjelasan materi telah direkam dan diunggah ke YouTube.
 
 **Link Video YouTube:**
-
-[![Thumbnail Video Pengerjaan](https://img.youtube.com/vi/1-qlNtQS1OA/0.jpg)](https://www.youtube.com/watch?v=1-qlNtQS1OA)
+[![Thumbnail Video YouTube](https://img.youtube.com/vi/z4dJuHGqQ8o/maxresdefault.jpg)](https://youtu.be/z4dJuHGqQ8o)
