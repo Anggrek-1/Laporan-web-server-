@@ -20,36 +20,56 @@ Coba akses server lewat SSH pakai CMD dan WinSCP untuk memastikan koneksinya sud
 
 # ▪️ Instalasi Apache Web Server 🌐
 1.Login dan Update Paket
-apt update && apt upgrade
+```bash
+apt update & apt upgrade
+```
 2.Instal Apache
+```bash
 apt install apache2
+```
 3.Aktifkan Apache dan pastikan berjalan
+```bash
 systemctl enable apache2
 systemctl start apache2
 systemctl status apache2
+```
 4.Uji dari browser: http://ip-server
 
 # ▪️ Instalasi PHP 🐘
 1.Instal PHP Dasar
+```bash
 apt install php
+```
 3.Instalasi Extension PHP Tambahan:
+```bash
 apt install php-common php-xml php-curl php-zip php-gd php-mbstring php-intl php-json php-soap php-mysql
+```
 
 # ▪️ Pastikan PHP Sudah Berjalan 🚀
 1.Buat file uji:
+```bash
 nano /var/www/html/info.php
+```
 2.tambahkan script berikut:
+```bash
 <?php phpinfo(); ?>
+```
 3.Akses dari browser: http://ip-server/info.php
 
 # ▪️ Menambahkan SSL Self-Signed Certificate 🔐
 1.Instal OpenSSL dan aktifkan modul SSL
+```bash
 apt install openssl
 a2enmod ssl
+```
 2.Buat folder untuk sertifikat
+```bash
 mkdir /etc/apache2/ssl
+```
 3.Buat sertifikat self-signed
+```bash
 openssl req -x509 -nodes -days 365 -newkey
+```
 4.contoh pengisian: 
 • Country Name (2 letter code) [AU]: ID
 • State or Province Name (full name) [Some-    State]: Jawa Barat
@@ -58,10 +78,15 @@ openssl req -x509 -nodes -days 365 -newkey
 
 # ▪️ Konfigurasi Virtual Host HTTPS ⚙️📄
 1.Salin file konfigurasi default
+```bash
 cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default-ssl.conf
+```
 2.Edit supaya bisa memasukan konfigurasi file SSL
+```bash
 nano /etc/apache2/sites-available/000-default-ssl.conf
+```
 3.Isi dengan konfigurasi berikut:
+```bash
 VirtualHost *:443>
   ServerAdmin admin@localhost
   DocumentRoot /var/www/html
@@ -81,20 +106,26 @@ VirtualHost *:443>
    ErrorLog ${APACHE_LOG_DIR}/error.log
    CustomLog ${APACHE_LOG_DIR}/access.log      combined
    </VirtualHost>
+```
    Simpan (Ctrl + O, Enter), lalu keluar       (Ctrl + X).
 
 # ▪️ Aktifkan HTTPS dan Modul Rewrite ⚙️
 1.Aktifkan situs SSL dan modul rewrite
+```bash
 a2ensite 000-default-ssl.conf
 a2enmod rewrite
 systemctl reload apache2
+```bash
 2.Uji dari browser: https://ip-server
 
 # ▪️ Redirect HTTP ke HTTPS (Opsional) 🔗
 1.Untuk melakukan redirect (mengalihkan), baiknya server harus menggunakan IP statis, dan DNS server bekerja dengan baik, jika tidak sebaiknya skip dulu tahapan di bawah!
 2.Edit file konfigurasi HTTP:
+```bash
 nano /etc/apache2/sites-available/000-default.conf
+```
 3.Tambahkan perintah redirect di dalam <VirtualHost *:80>:
+```bash
 <VirtualHost *:80>
   ServerAdmin admin@localhost
   ServerName server.local
@@ -106,14 +137,19 @@ nano /etc/apache2/sites-available/000-default.conf
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log      combined
 </VirtualHost>
+```
 4.Kita bisa menyesuaikan nama domain dan target redirect 
 5.Reload Apache:
+```bash
 systemctl reload apache2
+```
 
 # ▪️ Uji Coba Web Apache
 1.Pastikan Apache Berjalan
 Sebelum uji coba:
+```bash
 systemctl status apache2
+```
 Jika muncul active (running) → siap diuji.
 
 2.Uji Coba dari Browser 
@@ -138,7 +174,9 @@ Jika Apache berjalan, akan muncul isi HTML seperti:
 
  4. Uji Coba Folder Dokumen Web
 Coba buat file sederhana:
+```bash
 nano /var/www/html/test.html
+```
 Isi:
 <h2>Apache Test OK</h2>
 Simpan, lalu akses:
