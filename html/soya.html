@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Soraya Oktaviani Sopian</title>
+  <style>
+    /* ====== DASAR ====== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a855f7, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* ====== KONTENER UTAMA ====== */
+    .cv-container {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 800px;
+      animation: popOut 1s ease;
+      overflow: hidden;
+    }
+
+    /* ====== HEADER ====== */
+    .header {
+      background-color: #a855f7;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      margin: 10px 0 5px;
+      font-size: 26px;
+      line-height: 1.2;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: #f3e8ff;
+      margin: 5px 0;
+    }
+
+    /* ====== ISI UTAMA ====== */
+    .content {
+      padding: 25px 25px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      color: #6b21a8;
+      border-bottom: 2px solid #a855f7;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .section p, .section li {
+      color: #333;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    /* ====== LAGU ====== */
+    .song {
+      grid-column: span 2;
+      background-color: #f3e8ff;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .song p {
+      color: #6b21a8;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    audio {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* ====== ANIMASI ====== */
+    @keyframes popOut {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* ====== RESPONSIF (HP) ====== */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .header img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .header p {
+        font-size: 13px;
+      }
+
+      .section h2 {
+        font-size: 16px;
+      }
+
+      .section p, .section li {
+        font-size: 13px;
+      }
+
+      .song {
+        grid-column: span 1;
+        font-size: 13px;
+      }
+    }
+
+    /* ====== RESPONSIF UNTUK HP KECIL (max 480px) ====== */
+    @media (max-width: 480px) {
+      .header {
+        padding: 20px 10px;
+      }
+
+      .header img {
+        width: 90px;
+        height: 90px;
+      }
+
+      .cv-container {
+        border-radius: 15px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <div class="header">
+      <img src="/file.html/soraya.jpeg" alt="Foto Soraya">
+      <h1>Soraya Oktaviani Sopian</h1>
+      <p>Bandung, 10 Oktober 2008</p>
+      <p>Pemain game. Seorang Pembaca</p>
+    </div>
+
+    <div class="content">
+      <!-- Profil -->
+      <div class="section">
+        <h2>Profil Singkat</h2>
+        <p>halooo, aku adalah seorang pelajar dari SMKN 1 Soreang.
+          aku suka main game dan mungkin menghabiskan banyak waktu unyuk itu. tapi tugasku selalu selesai 
+        </p>
+      </div>
+
+      <!-- Pendidikan -->
+      <div class="section">
+        <h2>Pendidikan</h2>
+        <ul>
+          <li><strong>SMPN 2 Banjaran</strong> � Lulus 2023</li>
+          <li><strong>SMKN 1 Soreang</strong> � TKJ (2023�Sekarang)</li>
+        </ul>
+      </div>
+
+      <!-- Keahlian -->
+      <div class="section">
+        <h2>Keahlian</h2>
+        <ul>
+          <li>Desain Web (HTML, CSS, PHP Dasar)</li>
+          <li>Menulis & Membaca Cepat</li>
+          <li>mempelajari suatu hal dengan cepat</li>
+        </ul>
+      </div>
+
+      <!-- Hobi -->
+      <div class="section">
+        <h2>Hobi & Minat</h2>
+        <ul>
+          <li>Bermain game</li>
+          <li>Membaca novel dan komik</li>
+          <li>Merawat kucing</li>
+          <li>Mendengarkan musik</li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div class="section">
+        <h2>Kontak</h2>
+        <p><strong>Email:</strong> boyasopian@gmail.com</p>
+        <p><strong>No. HP:</strong> +62 812-3456-7890</p>
+        <p><strong>Alamat:</strong> Bandung, Jawa Barat</p>
+      </div>
+  </div>
+
+</body>
+</html>

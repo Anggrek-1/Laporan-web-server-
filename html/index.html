@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Profil Kelompok 1 - XI TJKT 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #fce4ec, #e3f2fd);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    h2 {
+      margin: 15px 0 5px;
+    }
+    p {
+      margin: 5px 0;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Profil Anggota Kelompok 1 - XI TJKT-1</h1>
+  <div class="container">
+
+    <a href="andrea.html" class="card">
+      <img src="reaimut.jpeg" alt="Foto Andrea">
+      <h2>Andrea Fredericka G.S</h2>
+      <p>Hobi: Main Roblox & Epep</p>
+      <p>Instagram: @reeavany</p>
+    </a>
+
+      <a href="risa.html" class="card">
+      <img src="risalucu.jpeg" alt="Foto Risa">
+      <h2>Risa Solaiha Maulida</h2>
+      <p>Hobi: Stel Lagu Stecu & One Only</p>
+      <p>Instagram: @eriiesa</p>
+    </a>
+
+     <a href="soya.html" class="card"> 
+      <img src="soraya.jpeg" alt="Foto Soraya">
+      <h2>Soraya Oktaviani S</h2>
+      <p>Hobi: Main Game</p>
+      <p>Instagram: @soya_hehe</p>
+    </a>
+
+     <a href="sri.html" class="card">
+      <img src="sri.jpeg" alt="Foto Sri">
+      <h2>Sri Ayu Andini</h2>
+      <p>Hobi: Menonton Kartun</p>
+      <p>Instagram: @sriayu0810</p>
+    </a>
+
+     <a href="elis.html" class="card">
+      <img src="elis.jpeg" alt="Foto Elis">
+      <h2>Elis Lisnawati</h2>
+      <p>Hobi: Badminton</p>
+      <p>Instagram: @elsrsmwti</p>
+    </a>
+
+  </div>
+
+  <footer>
+    <?php echo "Dibuat pada tanggal: " . date("d-m-Y"); ?>
+    <br>Server: <?php echo gethostname(); ?>
+  </footer>
+</body>
+</html>

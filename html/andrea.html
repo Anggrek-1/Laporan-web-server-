@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV - Andrea Fredericka Ghavany Saputra</title>
+
+  <!-- Google Font (opsional, jika online) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1: #e6e9ff; /* very light blue */
+      --bg2: #f9e6f0; /* very light pink */
+      --accent1: #7c5cff; /* purple */
+      --accent2: #6fb3ff; /* blue */
+      --card: #fff;
+      --muted: #6b6b6b;
+      --glass: rgba(255,255,255,0.7);
+      --shadow: 0 10px 30px rgba(20,20,40,0.12);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 100%);
+      margin:0;
+      padding:30px;
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* centered container that looks like a poster */
+    .wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .paper{
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 22px;
+      align-items: start;
+      position: relative;
+      overflow: visible;
+    }
+
+    /* fancy corner tape/sticker */
+    .sticker {
+      position: absolute;
+      left: 22px;
+      top: -18px;
+      background: linear-gradient(90deg,#ffd3e4,#fff8d6);
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-weight:700;
+      color:#333;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    /* Left column: profile + contact + education */
+    .left {
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,255,0.85));
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,0.03);
+      position: relative;
+    }
+
+    .photo {
+      width: 100%;
+      display:flex;
+      justify-content:center;
+      margin-bottom:12px;
+    }
+    .photo img{
+      width: 170px;
+      height: 170px;
+      object-fit:cover;
+      border-radius: 16px;
+      border: 6px solid #fff;
+      box-shadow: 0 8px 24px rgba(20,20,50,0.12);
+      transform: rotate(-2deg);
+    }
+
+    .name {
+      text-align:center;
+      margin-top:6px;
+    }
+    .name h1{
+      margin:8px 0 2px;
+      font-size:20px;
+      color: var(--accent1);
+    }
+    .name p.title{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .contact{
+      margin-top:18px;
+      background: linear-gradient(180deg, rgba(124,92,255,0.06), rgba(111,179,255,0.04));
+      padding:12px;
+      border-radius:12px;
+      border:1px dashed rgba(124,92,255,0.12);
+    }
+    .contact .row{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:8px 0;
+      font-size:14px;
+      color:#333;
+    }
+    .icon{
+      width:36px; height:36px;
+      display:inline-grid;place-items:center;
+      background:var(--glass);
+      border-radius:8px;
+      margin-right:8px;
+      color:var(--accent1);
+      font-weight:700;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .section-title{
+      margin-top:18px;
+      display:inline-block;
+      background: linear-gradient(90deg,#fff,#fff0);
+      padding:8px 12px;
+      border-radius:10px;
+      font-weight:700;
+      color: #333;
+      font-size:15px;
+      margin-bottom:8px;
+    }
+
+    .education, .org{
+      margin-top:10px;
+      font-size:14px;
+      color:#333;
+      background: linear-gradient(180deg, rgba(250,250,255,0.6), rgba(255,255,255,0.6));
+      padding:10px;
+      border-radius:10px;
+      border:1px solid rgba(0,0,0,0.03);
+    }
+
+    .education li, .org li{
+      margin:8px 0;
+      padding-left:6px;
+      list-style:none;
+    }
+    .education li::before{
+      content: "?";
+      color: var(--accent2);
+      display:inline-block;
+      width:18px;
+      margin-left:-18px;
+    }
+
+    /* Right column: description, experience, skills */
+    .right{
+      padding:18px;
+    }
+
+    .about-box{
+      background: linear-gradient(90deg, rgba(255,255,255,0.95), rgba(250,250,255,0.95));
+      border-radius: 12px;
+      padding:16px;
+      border:1px solid rgba(0,0,0,0.03);
+      margin-bottom:14px;
+      font-size:14px;
+      color:#333;
+      line-height:1.5;
+    }
+
+    .exp-card{
+      background: linear-gradient(180deg,#fff7f9,#f7fbff);
+      padding:14px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,0.03);
+      margin-bottom:14px;
+    }
+    .exp-card h3{ margin:0 0 8px; color:var(--accent1); }
+    .exp-card p{ margin:6px 0; font-size:14px; color:#444; }
+
+    /* Skills area like example: progress bars + software icons */
+    .skills {
+      display:flex;
+      gap:18px;
+      margin-top:8px;
+      align-items:flex-start;
+      flex-wrap:wrap;
+    }
+
+    .skill-list{
+      flex:1 1 60%;
+    }
+
+    .skill-item{
+      margin-bottom:12px;
+    }
+    .skill-item .label{
+      font-size:13px;
+      margin-bottom:6px;
+      color:#333;
+      display:flex;
+      justify-content:space-between;
+    }
+
+    .progress{
+      background:#f1f1f6;
+      height:12px;
+      border-radius:12px;
+      overflow:hidden;
+    }
+    .prog-fill{
+      height:100%;
+      border-radius:12px;
+      box-shadow: inset 0 -2px 4px rgba(0,0,0,0.05);
+      text-align:right;
+      padding-right:8px;
+      font-size:11px;
+      color: #fff;
+      line-height:12px;
+    }
+
+    .sw{
+      flex: 1 1 30%;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .sw .icon-box{
+      width:64px; height:64px;
+      border-radius:14px;
+      background: linear-gradient(180deg,#fff,#f7faff);
+      display:grid;place-items:center;
+      box-shadow: 0 6px 18px rgba(30,30,60,0.06);
+    }
+    .sw .label{font-size:13px;color:#444;margin-top:6px}
+
+    /* decorative small stickers on the right like stars */
+    .stickers{
+      position:absolute;
+      right: -18px;
+      top: 22px;
+      display:flex;
+      gap:8px;
+      transform: rotate(-8deg);
+    }
+    .star{
+      width:72px;height:72px;border-radius:12px;
+      background: linear-gradient(90deg,#fff8d6,#ffd6e8);
+      display:grid;place-items:center;font-weight:700;color:#e65ea6;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      font-size:12px;
+    }
+
+    /* responsive */
+    @media (max-width:920px){
+      .paper{grid-template-columns: 1fr; padding:18px;}
+      .stickers{display:none}
+      .photo img{width:140px;height:140px}
+    }
+
+    /* color fills for progress */
+    .fill-pink{ background: linear-gradient(90deg,#ff8fb8,#ff6090); width: 90%; } /* 90% */
+    .fill-blue{ background: linear-gradient(90deg,#6fb3ff,#4aa8ff); width: 80%; } /* 80% */
+    .fill-purple{ background: linear-gradient(90deg,#b58bff,#8e6bff); width: 85%; } /* 85% */
+    .fill-green{ background: linear-gradient(90deg,#ffd58b,#ffb74d); width: 75%; } /* 75% */
+
+    /* small tag style */
+    .tag {
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:12px;
+      background:linear-gradient(90deg,#fff,#fff0);
+      border:1px solid rgba(0,0,0,0.04);
+      font-weight:600;
+      color: #333;
+      margin-right:8px;
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="paper">
+      <div class="sticker">Andrea � Graphic Designer</div>
+
+      <!-- left column -->
+      <aside class="left">
+        <div class="photo">
+          <img src="/file.html/reaimut.jpeg" alt="Andrea">
+        </div>
+
+        <div class="name">
+          <h1>Andrea Fredericka Ghavany Saputra</h1>
+          <p class="title">Graphics Designer � Illustrator</p>
+        </div>
+
+        <div class="contact">
+          <div class="row">
+            <div class="icon">??</div>
+            <div>
+              <div style="font-size:13px;color:var(--muted)">Alamat</div>
+              <div style="font-weight:600">Perumahan Sanggar Indah Banjaran</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="icon">??</div>
+            <div>
+              <div style="font-size:13px;color:var(--muted)">TTL</div>
+              <div style="font-weight:600">5 Agustus 2008</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="icon">??</div>
+            <div>
+              <div style="font-size:13px;color:var(--muted)">Phone</div>
+              <div style="font-weight:600">0858-6129-6557</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="icon">??</div>
+            <div>
+              <div style="font-size:13px;color:var(--muted)">Email</div>
+              <div style="font-weight:600">andreaghavany@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="icon">??</div>
+            <div>
+              <div style="font-size:13px;color:var(--muted)">Instagram</div>
+              <div style="font-weight:600">@reeavany</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title" style="margin-top:16px">Riwayat Pendidikan</div>
+        <ul class="education">
+          <li>SDN CIBABAT MANDIRI 1</li>
+          <li>SMPN 10 CIMAHI</li>
+          <li>SMKN 1 SOREANG (Jurusan TJKT)</li>
+        </ul>
+
+        <div class="section-title" style="margin-top:14px">Organisasi</div>
+        <div class="education">
+          <li>OSIS � aktif di kegiatan sekolah dan dokumentasi</li>
+        </div>
+
+      </aside>
+
+      <!-- right column -->
+      <main class="right">
+        <div class="stickers">
+          <div class="star">? Creative</div>
+          <div class="star">? Organized</div>
+        </div>
+
+        <div class="about-box">
+          <strong>Tentang Saya</strong>
+          <p style="margin-top:8px">Saya adalah individu kreatif yang tertarik pada desain grafis dan ilustrasi. Saya suka membuat poster, konten visual, dan mengedit foto/video sederhana untuk kebutuhan promosi dan tugas sekolah.</p>
+        </div>
+
+        <div class="exp-card">
+          <h3>Pengalaman & Kegiatan</h3>
+          <p>� Anggota OSIS � terlibat dalam kegiatan publikasi, desain poster, dan dokumentasi acara sekolah.</p>
+          <p>� Freelance Graphic Designer (online) � membuat poster, banner, dan konten media sosial.</p>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap">
+          <div style="flex:1 1 60%;">
+            <div style="display:flex; align-items:center; gap:8px">
+              <div class="section-title" style="margin:0">Skills</div>
+              <div style="font-size:13px;color:var(--muted); margin-left:6px">� Desain & Editing</div>
+            </div>
+
+            <div class="skill-list" style="margin-top:10px">
+              <div class="skill-item">
+                <div class="label"><span>Design Grafis</span><span>90%</span></div>
+                <div class="progress"><div class="prog-fill fill-pink" style="width:90%"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="label"><span>Editing Foto & Video</span><span>85%</span></div>
+                <div class="progress"><div class="prog-fill fill-purple" style="width:85%"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="label"><span>Canva / Figma</span><span>80%</span></div>
+                <div class="progress"><div class="prog-fill fill-blue" style="width:80%"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="label"><span>Communication</span><span>80%</span></div>
+                <div class="progress"><div class="prog-fill fill-green" style="width:80%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sw">
+            <div class="section-title" style="margin-bottom:10px">Software Skills</div>
+
+            <div class="icon-box" title="Adobe Illustrator">
+              <!-- simple AI icon (svg) -->
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="4" fill="#FF9AA8"/>
+                <text x="12" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Ai</text>
+              </svg>
+            </div>
+            <div class="label">Ai</div>
+
+            <div class="icon-box" style="margin-top:8px" title="Photoshop">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="4" fill="#7fc0ff"/>
+                <text x="12" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Ps</text>
+              </svg>
+            </div>
+            <div class="label">Ps</div>
+
+            <div class="icon-box" style="margin-top:8px" title="Canva">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#66d0ff"/>
+                <text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Can</text>
+              </svg>
+            </div>
+            <div class="label">Canva</div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
